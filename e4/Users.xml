@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User id="1">
+    <Name>123</Name>
+    <Surname>231</Surname>
+    <CellNumber>0123456789</CellNumber>
+  </User>
+  <User id="2">
+    <Name>1</Name>
+    <Surname>2</Surname>
+    <CellNumber>0123456789</CellNumber>
+  </User>
+</Users>

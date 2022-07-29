@@ -1,0 +1,45 @@
+﻿@page
+@model e4.Pages.Users.CreateUserModel
+@{
+}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-lg-9 col-12 mx-auto">
+            <div class="card">
+                 <div class="card-header">
+                    <strong>Create User</strong>
+                </div>
+                <div class="card-body">
+                <form method="post" asp-page="CreateUser">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input asp-for="ObjectToCreate.Name" type="text" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.ObjectToCreate.Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input asp-for="ObjectToCreate.Surname" type="text" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.ObjectToCreate.Surname, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cell Number</label>
+                        <input asp-for="ObjectToCreate.CellNumber" type="number" size="10" minlength="8" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.ObjectToCreate.CellNumber, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="d-flex justify-content-start mt-4">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                </div>
+     
+            </div>
+        </div>
+    </div>
+</div>
